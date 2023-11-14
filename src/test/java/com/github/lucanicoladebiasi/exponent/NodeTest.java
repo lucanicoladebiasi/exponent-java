@@ -1,5 +1,6 @@
-package com.github.lucanicoladebiasi;
+package com.github.lucanicoladebiasi.exponent;
 
+import com.github.lucanicoladebiasi.exponent.Node;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;

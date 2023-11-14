@@ -1,4 +1,4 @@
-package com.github.lucanicoladebiasi;
+package com.github.lucanicoladebiasi.exponent;
 
 import java.util.*;
 

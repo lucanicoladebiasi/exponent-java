@@ -1,4 +1,4 @@
-package com.github.lucanicoladebiasi;
+package com.github.lucanicoladebiasi.exponent;
 
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
