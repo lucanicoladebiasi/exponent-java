@@ -1,9 +1,15 @@
 package com.github.lucanicoladebiasi.exponent;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Comparator;
+import java.util.PriorityQueue;
 
 /**
- * https://www.tryexponent.com/courses/software-engineering/swe-practice/k-messed-array-sort
+ * The class extends {@link ArrayList} implementing the
+ * <a href="https://www.tryexponent.com/courses/software-engineering/swe-practice/k-messed-array-sort">k-messed array sort</a>
+ * algorithm.
+ *
  * @param <T>
  */
 public class KMessedArray<T> extends ArrayList<T> {
@@ -30,20 +36,20 @@ public class KMessedArray<T> extends ArrayList<T> {
     ) {
         final PriorityQueue<T> priorityQueue = new PriorityQueue<>(k, comparator);
         int i = 0;
-        while(i < size() && i <= k) {
+        while (i < size() && i <= k) {
             priorityQueue.add(get(i));
-            i ++;
+            i++;
         }
         int j = 0;
-        while(i < size()) {
+        while (i < size()) {
             set(j, priorityQueue.poll());
             priorityQueue.add(get(i));
-            i ++;
-            j ++;
+            i++;
+            j++;
         }
         while (j < size() && !priorityQueue.isEmpty()) {
             set(j, priorityQueue.poll());
-            j ++;
+            j++;
         }
         return this;
     }
